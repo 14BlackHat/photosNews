@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using photosNews.VM;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace photosNews.Views
+{
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class login : ContentPage
+	{
+		public login()
+		{
+			InitializeComponent();
+			BindingContext = new VMlogin(Navigation);
+		}
+    }
+}

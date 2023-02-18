@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="photosNews.Views.photo"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".8*"/>
+                <RowDefinition Height=".2*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <StackLayout Orientation="Vertical"
+                             HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="Center"
+                             Spacing="20">
+                    <Label Text="Tomar Fotografía"
+                           TextColor="Black"
+                           FontSize="35"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"></Label>
+                    <Image Source="camara.png"
+                           HeightRequest="170">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding takePhotoCommand}">
+                            </TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Text="Presione para abrir Cámara"
+                           TextColor="Black"
+                           FontSize="18"
+                           HorizontalTextAlignment="Center"></Label>
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Frame BackgroundColor="Black"
+                       Margin="15,25,15,25"
+                       CornerRadius="20">
+                    <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="CenterAndExpand"
+                                 VerticalOptions="CenterAndExpand"
+                                 Spacing="50">
+                        <StackLayout>
+                            <Frame WidthRequest="30"
+                               CornerRadius="10">
+                                <Image Source="camara.png"></Image>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding photoCommand}">
+                                    </TapGestureRecognizer>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                            <Label Text="Fotografía"
+                                   TextColor="White"
+                                   HorizontalTextAlignment="Center"
+                                   FontSize="Caption"></Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Frame WidthRequest="30"
+                               CornerRadius="10">
+                                <Image Source="salir.png"></Image>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding salirCommand}">
+                                    </TapGestureRecognizer>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                            <Label Text="Cerrar Sesión"
+                                   TextColor="White"
+                                   HorizontalTextAlignment="Center"
+                                   FontSize="Caption"></Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Frame WidthRequest="30"
+                               CornerRadius="10">
+                                <Image Source="news.png"></Image>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding newsCommand}">
+                                    </TapGestureRecognizer>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                            <Label Text="Noticias"
+                                   TextColor="White"
+                                   HorizontalTextAlignment="Center"
+                                   FontSize="Caption"></Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

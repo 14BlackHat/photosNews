@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="photosNews.Views.login"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".15*"/>
+                <RowDefinition Height=".65*"/>
+                <RowDefinition Height=".2*"/>
+            </Grid.RowDefinitions>
+            <!--Titulo Photos-->
+            <Grid Grid.Row="0">
+                <StackLayout Margin="30,55,0,0">
+                    <Label Text="Photos"
+                       TextColor="Black"
+                       FontSize="70"
+                       HorizontalOptions="StartAndExpand"></Label>
+                </StackLayout>
+            </Grid>
+            <!--Formulario Login-->
+            <Grid Grid.Row="1">
+                <Frame BackgroundColor="Black"
+                   CornerRadius="50"
+                   Margin="50,0,0,0">
+                    <StackLayout Orientation="Vertical"
+                                 Spacing="100"
+                                 HorizontalOptions="CenterAndExpand">
+                        <Label Text="&amp; News"
+                               FontSize="70"
+                               TextColor="White"
+                               HorizontalOptions="StartAndExpand"
+                               TranslationX="-40"></Label>
+                        <StackLayout Orientation="Vertical"
+                                     Spacing="35">
+                            <StackLayout Spacing="5">
+                               <Label Text="Usuario"
+                                   TextColor="White"
+                                   FontSize="Body"></Label>
+                            <Entry x:Name="usuario"
+                               FontSize="Body"
+                               BackgroundColor="White"
+                                   Text="{Binding nombre}"></Entry> 
+                            </StackLayout>
+                            <StackLayout Spacing="5">
+                                <Label Text="Contraseña"
+                                   TextColor="White"
+                                   FontSize="Body"></Label>
+                                <Entry x:Name="password"
+                               FontSize="Body"
+                               BackgroundColor="White"
+                                       IsPassword="True"
+                                       Text="{Binding password}"></Entry>
+                            </StackLayout>
+                            <Button Text="Ingresar"
+                                    TextTransform="None"
+                                    BackgroundColor="White"
+                                    TextColor="Black"
+                                    CornerRadius="10"
+                                    HorizontalOptions="CenterAndExpand"
+                                    WidthRequest="200"
+                                    Command="{Binding ingresarCommand}"></Button>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+            <!--Labels nuevo usuario-->
+            <Grid Grid.Row="2"
+                  Margin="0,25,0,0">
+                <StackLayout Orientation="Vertical"
+                             Spacing="5"
+                             HorizontalOptions="CenterAndExpand"
+                             Margin="0,30,0,0">
+                    <Label Text="Aun no tiene cuenta?"
+                           TextColor="Black"
+                           FontSize="Body"
+                           HorizontalTextAlignment="Center"></Label>
+                    <Label Text="Registrar nuevo usuario"
+                           TextColor="CornflowerBlue"
+                           FontSize="Body"
+                           HorizontalTextAlignment="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding registroCommand}">
+                            </TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

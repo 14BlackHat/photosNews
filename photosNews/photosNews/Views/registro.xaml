@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="photosNews.Views.registro"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".2*"/>
+                <RowDefinition Height=".6*"/>
+                <RowDefinition Height=".2*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Label Text="Registrar Usuario"
+                       TextColor="white"
+                       FontSize="35"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"></Label>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Frame BackgroundColor="White"
+                       CornerRadius="50"
+                       Margin="10,0,10,0">
+                    <StackLayout Orientation="Vertical"
+                                Spacing="15"
+                                 HorizontalOptions="Center"
+                                 WidthRequest="300"
+                                 VerticalOptions="Center">
+                        <StackLayout Spacing="3">
+                            <Label Text="Usuario"
+                                   TextColor="Black"
+                                   FontSize="Body"></Label>
+                            <Entry x:Name="usuario"
+                               FontSize="Body"
+                               BackgroundColor="White"
+                                   Text="{Binding nombre}"></Entry>
+                        </StackLayout>
+                        <StackLayout Spacing="3">
+                            <Label Text="E-Mail"
+                                   TextColor="Black"
+                                   FontSize="Body"></Label>
+                            <Entry x:Name="email"
+                               FontSize="Body"
+                               BackgroundColor="White"
+                                   Text="{Binding email}"></Entry>
+                        </StackLayout>
+                        <StackLayout Spacing="3">
+                            <Label Text="Contraseña"
+                                   TextColor="Black"
+                                   FontSize="Body"></Label>
+                            <Entry x:Name="password"
+                               FontSize="Body"
+                               BackgroundColor="White"
+                                   Text="{Binding password}"
+                                   IsPassword="True"></Entry>
+                        </StackLayout>
+                        <StackLayout Spacing="3">
+                            <Label Text="Confirmar Contraseña"
+                                   TextColor="Black"
+                                   FontSize="Body"></Label>
+                            <Entry x:Name="passwordConfirm"
+                               FontSize="Body"
+                               BackgroundColor="White"
+                                   Text="{Binding confirmPassword}"
+                                   IsPassword="True"></Entry>
+                        </StackLayout>
+                        <Button Text="Registrar"                                    
+                                TextTransform="None"
+                                BackgroundColor="Black"
+                                TextColor="White"
+                                CornerRadius="10"
+                                HorizontalOptions="CenterAndExpand"
+                                WidthRequest="200"
+                                FontSize="Body"
+                                Command="{Binding guardarCommand}"></Button>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+            <Grid Grid.Row="2">
+                <StackLayout Orientation="Vertical"
+                             Spacing="10"
+                             HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="Center">
+                    <Label Text="Cancelar"
+                           TextColor="White"
+                           VerticalTextAlignment="Center"
+                           FontSize="Medium">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding cancelarCommand}">
+                            </TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
