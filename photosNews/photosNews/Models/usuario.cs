@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using SQLite;
 
-namespace photosNews.Models
+namespace photosStarWars.Models
 {
     public class usuario
     {
-        [PrimaryKey,AutoIncrement]
+        [PrimaryKey, AutoIncrement]
         public int idUsuario { get; set; }
         [MaxLength(50)]
 
@@ -17,6 +17,6 @@ namespace photosNews.Models
 
         public string email { get; set; }
         [MaxLength(50)]
-        public string password { get; set; }  
+        public string password { get; set; }
     }
 }

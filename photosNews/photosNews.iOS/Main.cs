@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace photosNews.iOS
+namespace photosStarWars.iOS
 {
     public class Application
     {

@@ -5,12 +5,12 @@ using photosStarWars.VM;
 namespace photosStarWars.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class registro : ContentPage
+	public partial class news : ContentPage
 	{
-		public registro ()
+		public news ()
 		{
 			InitializeComponent ();
-            BindingContext = new VMregistro(Navigation);
+            BindingContext = new VMpersonaje(Navigation);
         }
 	}
 }

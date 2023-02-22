@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
-namespace photosNews.VM
+namespace photosStarWars.VM
 {
     public class BaseViewModel : INotifyPropertyChanged
     {

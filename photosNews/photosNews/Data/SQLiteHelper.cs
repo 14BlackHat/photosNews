@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 using SQLite;
-using photosNews.Models;
 using System.Threading.Tasks;
+using photosStarWars.Models;
 
-namespace photosNews.Data
+namespace photosStarWars.Data
 {
     public class SQLiteHelper
     {

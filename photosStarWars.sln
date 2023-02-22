@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "photosNews.Android", "photosNews\photosNews.Android\photosNews.Android.csproj", "{E0B6CFCB-EA7E-4023-B8E1-479A3128ADA1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "photosStarWars.Android", "photosNews\photosNews.Android\photosStarWars.Android.csproj", "{E0B6CFCB-EA7E-4023-B8E1-479A3128ADA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "photosNews.iOS", "photosNews\photosNews.iOS\photosNews.iOS.csproj", "{F9623E16-0911-4F16-93D4-2B2A8C327247}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "photosStarWars.iOS", "photosNews\photosNews.iOS\photosStarWars.iOS.csproj", "{F9623E16-0911-4F16-93D4-2B2A8C327247}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "photosNews", "photosNews\photosNews\photosNews.csproj", "{69F1590B-4F22-4951-9B22-720A2581AE7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "photosStarWars", "photosNews\photosNews\photosStarWars.csproj", "{69F1590B-4F22-4951-9B22-720A2581AE7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

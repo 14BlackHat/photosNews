@@ -1,5 +1,6 @@
-﻿using photosNews.Models;
-using photosNews.Views;
+﻿using photosStarWars;
+using photosStarWars.Views;
+using photosStarWars.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace photosNews.VM
+namespace photosStarWars.VM
 {
     public class VMregistro : BaseViewModel
     {
@@ -57,7 +58,7 @@ namespace photosNews.VM
         }
         public async Task registrar()
         {
-            if(validarDatos())
+            if (validarDatos())
             {
                 usuario usuaio = new usuario()
                 {
@@ -75,11 +76,11 @@ namespace photosNews.VM
 
                     await DisplayAlert("Registro", "Se guardo correctamente el usuario", "Aceptar");
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     DisplayAlert("Error", ex.Message, "Aceptar");
                 }
-                
+
                 await Navigation.PopToRootAsync();
             }
             else
@@ -95,7 +96,7 @@ namespace photosNews.VM
             if (string.IsNullOrEmpty(_usuario))
             {
                 respuesta = false;
-                
+
             }
             else if (string.IsNullOrEmpty(_email))
             {
@@ -109,7 +110,7 @@ namespace photosNews.VM
             {
                 respuesta = false;
             }
-            else if(!(_confirmPassword.Equals(_password)))
+            else if (!_confirmPassword.Equals(_password))
             {
                 password = "";
                 confirmPassword = "";

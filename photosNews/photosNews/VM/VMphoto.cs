@@ -1,4 +1,4 @@
-﻿using photosNews.Views;
+﻿using photosStarWars.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,7 +8,7 @@ using Xamarin.Forms;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 
-namespace photosNews.VM
+namespace photosStarWars.VM
 {
     public class VMphoto : BaseViewModel
     {
@@ -51,7 +51,7 @@ namespace photosNews.VM
                 return;
             }
 
-            var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
+            var file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
             {
                 SaveToAlbum = true,
                 Directory = "Photos & News",

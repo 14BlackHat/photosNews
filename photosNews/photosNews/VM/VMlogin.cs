@@ -1,5 +1,6 @@
-﻿using photosNews.Models;
-using photosNews.Views;
+﻿using photosStarWars;
+using photosStarWars.Views;
+using photosStarWars.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,9 +9,9 @@ using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
-namespace photosNews.VM
+namespace photosStarWars.VM
 {
-    public class VMlogin:BaseViewModel
+    public class VMlogin : BaseViewModel
     {
         #region VARIABLES
         private string _nombre;
@@ -76,7 +77,7 @@ namespace photosNews.VM
             {
                 DisplayAlert("Error", "Datos Incompletos", "Aceptar");
             }
-            
+
         }
 
         public bool validarDatos()
@@ -91,7 +92,7 @@ namespace photosNews.VM
             else if (string.IsNullOrEmpty(_password))
             {
                 respuesta = false;
-            }     
+            }
             return respuesta;
         }
         public async Task registroClicked()

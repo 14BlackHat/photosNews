@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="photosNews.Views.news"
+             x:Class="photosStarWars.Views.news"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <Grid>
@@ -14,13 +14,13 @@
                              HorizontalOptions="CenterAndExpand"
                              VerticalOptions="Center"
                              Spacing="5">
-                    <Label Text="News"
+                    <Label Text="Star Wars"
                            TextColor="Black"
                            FontSize="50"
                            HorizontalTextAlignment="Center"
                            FontAttributes="Bold"></Label>
 
-                    <CollectionView ItemsSource="{Binding articulosModel}"
+                    <CollectionView ItemsSource="{Binding personajesModel}"
                                         Grid.Row="1"
                                         Margin="20,10,20,10"
                                         x:Name="articulos">
@@ -37,7 +37,7 @@
                             <DataTemplate>
                                 <Frame CornerRadius="20"
                                        BorderColor="Black"
-                                       HeightRequest="180">
+                                       BackgroundColor="Black">
                                     <Grid>
                                         <!--Definicion de Columnas y Lineas-->
                                         <Grid.ColumnDefinitions>
@@ -48,37 +48,83 @@
                                             <RowDefinition Height="Auto"/>
                                             <RowDefinition Height="Auto"/>
                                             <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
                                         </Grid.RowDefinitions>
-
-                                        <Image Grid.RowSpan="3"
-                                               Grid.Column="0"
-                                               Source="{Binding urlToImage}"></Image>
-                                        <!--Autor-->
+                                        
+                                        <!--Nombre-->
                                         <StackLayout    Grid.Row="0"
-                                                        Grid.Column="1">
-
-                                            <Label  Text="{Binding author}"                                                   
-                                                    TextColor="Black"
-                                                    FontSize="Default"
-                                                    FontAttributes="Bold"/>
+                                                        Grid.Column="0"
+                                                        Grid.RowSpan="4"
+                                                        VerticalOptions="Center">
+                                            <Label  Text="{Binding name}"                                                   
+                                                    TextColor="Goldenrod"
+                                                    FontSize="Large"
+                                                    FontAttributes="Bold"
+                                                    HorizontalTextAlignment="Center"/>
                                         </StackLayout>
 
-                                        <!--Titulo-->
-                                        <StackLayout    Grid.Row="1"
-                                                        Grid.Column="1">
-                                            
-                                            <Label  Text="{Binding title}"                                                   
-                                                    TextColor="Black"
+                                        <!--Altura-->
+                                        <StackLayout    Grid.Row="0"
+                                                        Grid.Column="1"
+                                                        Orientation="Horizontal">
+                                            <Label  Text="Altura:"                                                   
+                                                    TextColor="White"
+                                                    FontSize="Default"
+                                                    FontAttributes="Bold"/>
+                                            <Label  Text="{Binding height}"                                                  
+                                                    TextColor="White"
                                                     FontSize="Default"/>
                                         </StackLayout>
 
-                                        <!--url-->
+                                        <!--Peso-->
+                                        <StackLayout    Grid.Row="1"
+                                                        Grid.Column="1"
+                                                        Orientation="Horizontal">
+                                            <Label  Text="Peso:"                                                   
+                                                    TextColor="White"
+                                                    FontSize="Default"
+                                                    FontAttributes="Bold"/>
+                                            <Label  Text="{Binding mass}"                                                   
+                                                    TextColor="White"
+                                                    FontSize="Default"/>
+                                        </StackLayout>
+                                        
+                                        <!--Color de Skin-->
                                         <StackLayout    Grid.Row="2"
-                                                        Grid.Column="1">
-                                            <Label  Text="{Binding url}"                                                   
-                                                    TextType="Html"
-                                                    TextColor="CornflowerBlue"
-                                                    TextDecorations="Underline"
+                                                        Grid.Column="1"
+                                                        Orientation="Horizontal">
+                                            <Label  Text="Color de Skin:"                                                   
+                                                    TextColor="White"
+                                                    FontSize="Default"
+                                                    FontAttributes="Bold"/>
+                                            <Label  Text="{Binding skin_color}"                                                   
+                                                    TextColor="White"
+                                                    FontSize="Default"/>
+                                        </StackLayout>
+                                        
+                                        <!--Nacimiento-->
+                                        <StackLayout    Grid.Row="3"
+                                                        Grid.Column="1"
+                                                        Orientation="Horizontal">
+                                            <Label  Text="Año de Nacimiento:"                                                   
+                                                    TextColor="White"
+                                                    FontSize="Default"
+                                                    FontAttributes="Bold"/>
+                                            <Label  Text="{Binding birth_year}"                                                   
+                                                    TextColor="White"
+                                                    FontSize="Default"/>
+                                        </StackLayout>
+                                        <!--Nacimiento-->
+                                        <StackLayout    Grid.Row="4"
+                                                        Grid.Column="1"
+                                                        Orientation="Horizontal">
+                                            <Label  Text="Género:"                                                   
+                                                    TextColor="White"
+                                                    FontSize="Default"
+                                                    FontAttributes="Bold"/>
+                                            <Label  Text="{Binding gender}"                                                   
+                                                    TextColor="White"
                                                     FontSize="Default"/>
                                         </StackLayout>
                                     </Grid>
@@ -127,13 +173,13 @@
                         <StackLayout>
                             <Frame WidthRequest="30"
                                CornerRadius="10">
-                                <Image Source="news.png"></Image>
+                                <Image Source="r2d2.png"></Image>
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding newsCommand}">
                                     </TapGestureRecognizer>
                                 </Frame.GestureRecognizers>
                             </Frame>
-                            <Label Text="Noticias"
+                            <Label Text="Star Wars"
                                    TextColor="White"
                                    HorizontalTextAlignment="Center"
                                    FontSize="Caption"></Label>

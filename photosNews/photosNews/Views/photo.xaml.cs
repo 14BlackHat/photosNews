@@ -1,16 +1,10 @@
-﻿using photosNews.VM;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using photosStarWars.VM;
 
-namespace photosNews.Views
+namespace photosStarWars.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class photo : ContentPage
 	{
         public photo()

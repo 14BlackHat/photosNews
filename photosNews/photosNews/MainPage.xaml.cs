@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Diagnostics;
 
-namespace photosNews
+namespace photosStarWars
 {
     public partial class MainPage : ContentPage
     {

@@ -1,11 +1,11 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using photosNews.Views;
-using photosNews.Data;
+using photosStarWars.Views;
+using photosStarWars.Data;
 using System.IO;
 
-namespace photosNews
+namespace photosStarWars
 {
     public partial class App : Application
     {

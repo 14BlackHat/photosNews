@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="photosNews.Views.login"
+             x:Class="photosStarWars.Views.login"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <Grid>
@@ -27,11 +27,10 @@
                     <StackLayout Orientation="Vertical"
                                  Spacing="100"
                                  HorizontalOptions="CenterAndExpand">
-                        <Label Text="&amp; News"
-                               FontSize="70"
-                               TextColor="White"
-                               HorizontalOptions="StartAndExpand"
-                               TranslationX="-40"></Label>
+                        <Label Text="&amp; Star Wars"
+                               FontSize="60"
+                               TextColor="Goldenrod"
+                               HorizontalOptions="StartAndExpand"></Label>
                         <StackLayout Orientation="Vertical"
                                      Spacing="35">
                             <StackLayout Spacing="5">
